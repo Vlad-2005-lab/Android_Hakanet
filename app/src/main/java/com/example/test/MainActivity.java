@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,26 +32,29 @@ public class MainActivity extends AppCompatActivity {
                 r.getDisplayMetrics()
         );
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.vidvig);
+        ImageButton imageButton = (ImageButton) findViewById(R.id.imageButton);
         if (flag){
+            imageButton.animate().rotation(360).setDuration(500);
             linearLayout.animate()
                     .setDuration(500)
-                    .translationY(size_10_dp * 20)
+                    .translationY(size_10_dp * 28)
                     .setListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
                             super.onAnimationEnd(animation);
-                            linearLayout.setTranslationY(size_10_dp * 20);//Здесь оставляем изменения после конца анимации
+                            linearLayout.setTranslationY(size_10_dp * 28);//Здесь оставляем изменения после конца анимации
                         }
                     });
         } else {
+            imageButton.animate().rotation(-360).setDuration(500);
             linearLayout.animate()
                     .setDuration(500)
-                    .translationY(-size_10_dp * 20)
+                    .translationY(-size_10_dp * 28)
                     .setListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
                             super.onAnimationEnd(animation);
-                            linearLayout.setTranslationY(-size_10_dp * 20);//Здесь оставляем изменения после конца анимации
+                            linearLayout.setTranslationY(-size_10_dp * 28);//Здесь оставляем изменения после конца анимации
                         }
                     });
         }

@@ -16,22 +16,30 @@
         android:background="#FF0000"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+        app:layout_constraintStart_toStartOf="parent">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="75dp"
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="81dp"
         android:layout_height="80dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
         android:background="#FFFFFF"
-        android:onClick="onClick"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
         android:paddingTop="5dp"
-        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vidvig"
-        app:srcCompat="@drawable/kartinka"
-        tools:srcCompat="@drawable/kartinka" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="#FFFFFF"
+            android:onClick="onClick"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/kartinka"
+            tools:srcCompat="@drawable/kartinka" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -88,11 +96,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
