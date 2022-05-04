@@ -28,6 +28,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:gravity="start|center_vertical"
+            android:onClick="enter_click"
             android:orientation="horizontal">
 
             <ImageView
@@ -44,6 +45,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="5"
                 android:text="@string/enter"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 android:visibility="gone" />
         </LinearLayout>
@@ -57,6 +59,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:gravity="left|center_vertical"
+            android:onClick="messenger"
             android:orientation="horizontal">
 
             <ImageView
@@ -73,6 +76,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="5"
                 android:text="@string/messenger"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 android:visibility="gone"
                 tools:text="@string/messenger" />

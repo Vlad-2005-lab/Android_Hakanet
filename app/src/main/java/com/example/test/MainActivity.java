@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Resources r;
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         if (flag) {
             enter_or_exit.setVisibility(View.GONE);
             messenger.setVisibility(View.GONE);
-            imageButton.animate().rotation(360).setDuration(1000).setListener(new AnimatorListenerAdapter() {
+            imageButton.animate().rotation(360).setDuration(500).setListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     super.onAnimationEnd(animation);
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }).start();
             linearLayout.animate()
-                    .setDuration(500)
+                    .setDuration(250)
                     .translationY(size_221_dp).setStartDelay(0)
                     .setListener(new AnimatorListenerAdapter() {
                         @Override
@@ -66,18 +67,18 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }).start();
             ResizeWidthAnimation anim = new ResizeWidthAnimation(linearLayout, size_75_dp * 3);
-            anim.setDuration(500);
-            anim.setStartOffset(500);
+            anim.setDuration(250);
+            anim.setStartOffset(250);
             linearLayout.startAnimation(anim);
         } else {
             enter_or_exit.setVisibility(View.GONE);
             messenger.setVisibility(View.GONE);
             ResizeWidthAnimation anim = new ResizeWidthAnimation(linearLayout, size_75_dp);
-            anim.setDuration(500);
+            anim.setDuration(250);
             linearLayout.startAnimation(anim);
-            imageButton.animate().rotation(-360).setDuration(1000).start();
+            imageButton.animate().rotation(-360).setDuration(500).start();
             linearLayout.animate()
-                    .setDuration(500).setStartDelay(500)
+                    .setDuration(250).setStartDelay(250)
                     .translationY(-size_221_dp)
                     .setListener(new AnimatorListenerAdapter() {
                         @Override
@@ -88,6 +89,14 @@ public class MainActivity extends AppCompatActivity {
                     });
         }
         flag = !flag;
+    }
+
+    public void enter_click(View view){
+        Toast.makeText(getApplicationContext(), "EXIT", Toast.LENGTH_SHORT).show();
+    }
+
+    public void messenger(View view){
+        Toast.makeText(getApplicationContext(), "messenger", Toast.LENGTH_SHORT).show();
     }
 
     public class ResizeWidthAnimation extends Animation {
