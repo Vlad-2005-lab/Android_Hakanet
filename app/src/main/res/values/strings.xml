@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Test</string>
+    <string name="exit">Выйти</string>
+    <string name="enter">Войти</string>
+    <string name="messenger">Мессенжер</string>
+    <string name="home">Главная</string>
+    <string name="news">Новости</string>
+    <string name="teachers">Учителя</string>
+    <string name="students">Ученики</string>
 </resources>
