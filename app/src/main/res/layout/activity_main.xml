@@ -4,50 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
+        android:id="@+id/vidvig"
+        android:layout_width="75dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="#FF0000"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="75dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="#FFFFFF"
+        android:onClick="onClick"
+        android:paddingTop="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vidvig"
+        app:srcCompat="@drawable/kartinka"
+        tools:srcCompat="@drawable/kartinka" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
-        <LinearLayout
-            android:id="@+id/lent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"/>
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/kartinka"
+            tools:srcCompat="@drawable/kartinka" />
 
-        <LinearLayout
-            android:id="@+id/block"
-            android:layout_width="100dp"
-            android:layout_height="200dp"
-            android:layout_gravity="right"
-            android:background="#FF0000"
-            android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/kartinka"
+            tools:srcCompat="@drawable/kartinka" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="#00FF00"
-                android:orientation="horizontal"></LinearLayout>
-        </LinearLayout>
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/kartinka"
+            tools:srcCompat="@drawable/kartinka" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/kartinka"
+            tools:srcCompat="@drawable/kartinka" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:onClick="onClick"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

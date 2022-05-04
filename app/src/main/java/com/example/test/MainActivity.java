@@ -30,19 +30,8 @@ public class MainActivity extends AppCompatActivity {
                 10,
                 r.getDisplayMetrics()
         );
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.block);
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.vidvig);
         if (flag){
-            linearLayout.animate()
-                    .setDuration(500)
-                    .translationY(-size_10_dp * 20)
-                    .setListener(new AnimatorListenerAdapter() {
-                        @Override
-                        public void onAnimationEnd(Animator animation) {
-                            super.onAnimationEnd(animation);
-                            linearLayout.setTranslationY(-size_10_dp * 20);//Здесь оставляем изменения после конца анимации
-                        }
-                    });
-        } else {
             linearLayout.animate()
                     .setDuration(500)
                     .translationY(size_10_dp * 20)
@@ -51,6 +40,17 @@ public class MainActivity extends AppCompatActivity {
                         public void onAnimationEnd(Animator animation) {
                             super.onAnimationEnd(animation);
                             linearLayout.setTranslationY(size_10_dp * 20);//Здесь оставляем изменения после конца анимации
+                        }
+                    });
+        } else {
+            linearLayout.animate()
+                    .setDuration(500)
+                    .translationY(-size_10_dp * 20)
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            linearLayout.setTranslationY(-size_10_dp * 20);//Здесь оставляем изменения после конца анимации
                         }
                     });
         }
