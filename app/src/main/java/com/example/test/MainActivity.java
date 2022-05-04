@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
                             super.onAnimationEnd(animation);
                             linearLayout.setTranslationY(size_10_dp * 28);//Здесь оставляем изменения после конца анимации
                         }
-                    });
+                    }).start();
+//            linearLayout.animate().scaleX(2).setStartDelay(500);
         } else {
             imageButton.animate().rotation(-360).setDuration(500);
             linearLayout.animate()
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                             linearLayout.setTranslationY(-size_10_dp * 28);//Здесь оставляем изменения после конца анимации
                         }
                     });
+//            linearLayout.animate().scaleX((float) 0.5).setStartDelay(500);
         }
         flag = !flag;
         System.out.println(1);
