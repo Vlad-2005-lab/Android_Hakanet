@@ -9,8 +9,8 @@
 
     <LinearLayout
         android:id="@+id/vidvig"
-        android:layout_width="75dp"
-        android:layout_height="205dp"
+        android:layout_width="55dp"
+        android:layout_height="145dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
         android:background="@drawable/menu"
@@ -21,7 +21,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="35dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -32,8 +32,8 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 app:srcCompat="@drawable/ic_profile" />
 
             <TextView
@@ -46,13 +46,13 @@
                 android:gravity="left|center_vertical"
                 android:text="@string/profile_menu"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="14sp"
                 android:visibility="gone" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="35dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -64,8 +64,8 @@
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 app:srcCompat="@drawable/ic_messenger" />
 
             <TextView
@@ -77,14 +77,14 @@
                 android:layout_weight="5"
                 android:text="@string/messenger"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="14sp"
                 android:visibility="gone"
                 tools:text="@string/messenger" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="35dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -96,8 +96,8 @@
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 app:srcCompat="@drawable/ic_login" />
 
             <TextView
@@ -109,7 +109,7 @@
                 android:layout_weight="5"
                 android:text="@string/enter"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="14sp"
                 android:visibility="gone" />
         </LinearLayout>
 
@@ -117,8 +117,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="81dp"
-        android:layout_height="80dp"
+        android:layout_width="61dp"
+        android:layout_height="60dp"
         android:background="#FFFFFF"
         android:orientation="horizontal"
         android:paddingLeft="5dp"
@@ -128,8 +128,8 @@
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:background="#FFFFFF"
             android:onClick="onClick"
             android:scaleType="centerCrop"

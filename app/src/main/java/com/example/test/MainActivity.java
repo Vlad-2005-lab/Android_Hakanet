@@ -4,8 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.annotation.SuppressLint;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -14,6 +20,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,17 +44,28 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = (TextView) findViewById(R.id.textView4);
         bt.setColorFilter(Color.argb(255, 255, 100, 0));
         tv.setTextColor(Color.argb(255, 255, 100, 0));
+
+        ContentValues cv = new ContentValues();
+        DBHelper dbHelper = new DBHelper(this);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        @SuppressLint("Recycle") Cursor c = db.query("sq", null, null, null, null, null, null);
+        if (c.moveToFirst()) {
+            ImageView bt1 = (ImageView) findViewById(R.id.imageView7);
+            bt1.setImageResource(R.drawable.ic_exit);
+            TextView vieww = (TextView) findViewById(R.id.enter_or_exit);
+            vieww.setText(R.string.exit);
+        }
     }
 
     public void onClick(View view) throws InterruptedException {
         int size_221_dp = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
-                286,
+                205,
                 r.getDisplayMetrics()
         );
         int size_75_dp = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
-                75,
+                55,
                 r.getDisplayMetrics()
         );
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.vidvig);
@@ -105,8 +123,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void enter_click(View view){
-        Intent intent = new Intent(this, regenter.class);
-        startActivity(intent);
+        ContentValues cv = new ContentValues();
+        DBHelper dbHelper = new DBHelper(this);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        @SuppressLint("Recycle") Cursor c = db.query("sq", null, null, null, null, null, null);
+        if (c.moveToFirst()) {
+            MainActivity.this.deleteDatabase("myDB");
+            ImageView bt1 = (ImageView) findViewById(R.id.imageView7);
+            bt1.setImageResource(R.drawable.ic_login);
+            TextView vieww = (TextView) findViewById(R.id.enter_or_exit);
+            vieww.setText(R.string.enter);
+        } else {
+            Intent intent = new Intent(this, regenter.class);
+            startActivity(intent);
+        }
     }
 
     public void messenger(View view){
@@ -145,6 +175,25 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean willChangeBounds() {
             return true;
+        }
+    }
+
+    static class DBHelper extends SQLiteOpenHelper {
+        public DBHelper(Context context) {
+            // конструктор суперкласса
+            super(context, "myDB", null, 1);
+        }
+
+        @Override
+        public void onCreate(SQLiteDatabase db) {
+            db.execSQL("create table sq ("
+                    + "id integer primary key autoincrement,"
+                    + "yes text," + "my_id integer" + ");");
+        }
+
+        @Override
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
         }
     }
 }
