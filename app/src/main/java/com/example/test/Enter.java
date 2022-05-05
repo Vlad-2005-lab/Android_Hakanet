@@ -31,15 +31,12 @@ public class Enter extends AppCompatActivity {
     Resources r;
     int size_10_dp;
 
-//    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+    //    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enter);
         getSupportActionBar().hide();
-
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
 
         r = this.getResources();
         size_10_dp = (int) TypedValue.applyDimension(
@@ -82,11 +79,11 @@ public class Enter extends AppCompatActivity {
         String password = e2.getText().toString();
         AsyncRequest a = new AsyncRequest();
         String ans = a.doInBackground(login, password);
-        if (login.length() == 0){
+        if (login.length() == 0) {
             e1.setBackgroundResource(R.drawable.gray_red);
             e1.setPadding(size_10_dp, size_10_dp, size_10_dp, size_10_dp);
         }
-        if (password.length() == 0){
+        if (password.length() == 0) {
             e2.setBackgroundResource(R.drawable.gray_red);
             e2.setPadding(size_10_dp, size_10_dp, size_10_dp, size_10_dp);
         }
