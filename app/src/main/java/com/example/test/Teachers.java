@@ -60,7 +60,7 @@ public class Teachers  extends AppCompatActivity {
     public void onClick(View view) throws InterruptedException {
         int size_221_dp = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
-                205,
+                220,
                 r.getDisplayMetrics()
         );
         int size_75_dp = (int) TypedValue.applyDimension(
