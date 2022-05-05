@@ -11,6 +11,7 @@ public class regenter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.regenter);
+        getSupportActionBar().hide();
     }
 
 

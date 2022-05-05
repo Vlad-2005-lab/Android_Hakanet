@@ -10,12 +10,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.icu.number.IntegerWidth;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
@@ -28,10 +31,16 @@ public class Enter extends AppCompatActivity {
     Resources r;
     int size_10_dp;
 
+//    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enter);
+        getSupportActionBar().hide();
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
         r = this.getResources();
         size_10_dp = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
@@ -128,7 +137,7 @@ public class Enter extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... arg) {
-            String url = "https://9497-2a00-1fa2-442e-29ea-9d1f-f9c6-f818-ff36.eu.ngrok.io/check_user";
+            String url = "https://4f74-178-72-68-144.ngrok.io/check_user?l=" + arg[0] + "&p=" + arg[1];
             StringBuffer response;
             try {
                 URL obj = new URL(url);

@@ -99,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void enter_click(View view){
-        Toast.makeText(getApplicationContext(), "enter", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, regenter.class);
         startActivity(intent);
         this.finish();
