@@ -26,6 +26,9 @@
         <activity android:name=".Enter"/>
         <activity android:name=".register"/>
         <activity android:name=".regenter"/>
+        <activity android:name=".News"/>
+        <activity android:name=".Teachers"/>
+        <activity android:name=".Students"/>
     </application>
 
 </manifest>
