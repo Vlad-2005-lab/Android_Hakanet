@@ -8,11 +8,8 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.Transformation;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) throws InterruptedException {
         int size_221_dp = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
-                222,
+                286,
                 r.getDisplayMetrics()
         );
         int size_75_dp = (int) TypedValue.applyDimension(
@@ -45,15 +42,18 @@ public class MainActivity extends AppCompatActivity {
         ImageButton imageButton = (ImageButton) findViewById(R.id.imageButton);
         TextView enter_or_exit = (TextView) findViewById(R.id.enter_or_exit);
         TextView messenger = (TextView) findViewById(R.id.messenger);
+        TextView profile = (TextView) findViewById(R.id.profile111);
         if (flag) {
             enter_or_exit.setVisibility(View.GONE);
             messenger.setVisibility(View.GONE);
+            profile.setVisibility(View.GONE);
             imageButton.animate().rotation(360).setDuration(500).setListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     super.onAnimationEnd(animation);
                     enter_or_exit.setVisibility(View.VISIBLE);
                     messenger.setVisibility(View.VISIBLE);
+                    profile.setVisibility(View.VISIBLE);
                 }
             }).start();
             linearLayout.animate()
@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             enter_or_exit.setVisibility(View.GONE);
             messenger.setVisibility(View.GONE);
+            profile.setVisibility(View.GONE);
             ResizeWidthAnimation anim = new ResizeWidthAnimation(linearLayout, size_75_dp);
             anim.setDuration(250);
             linearLayout.startAnimation(anim);
@@ -92,11 +93,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void enter_click(View view){
-        Toast.makeText(getApplicationContext(), "EXIT", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "enter", Toast.LENGTH_SHORT).show();
     }
 
     public void messenger(View view){
         Toast.makeText(getApplicationContext(), "messenger", Toast.LENGTH_SHORT).show();
+    }
+
+    public void profile(View view){
+        Toast.makeText(getApplicationContext(), "profile", Toast.LENGTH_SHORT).show();
     }
 
     public class ResizeWidthAnimation extends Animation {

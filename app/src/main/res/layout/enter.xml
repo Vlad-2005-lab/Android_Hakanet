@@ -22,11 +22,15 @@
     <EditText
         android:id="@+id/login"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="60dp"
+        android:background="@drawable/gray"
         android:ems="10"
+        android:hint="@string/login_reg"
         android:inputType="textPersonName"
-        android:text="Введите логин"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -34,23 +38,31 @@
     <EditText
         android:id="@+id/password"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="40dp"
+        android:background="@drawable/gray"
         android:ems="10"
+        android:hint="@string/password_hint"
         android:inputType="textPassword"
-        android:text="Введите пароль"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
         app:layout_constraintEnd_toEndOf="@+id/login"
         app:layout_constraintStart_toStartOf="@+id/login"
         app:layout_constraintTop_toBottomOf="@+id/login" />
 
-    <ImageButton
-        android:id="@+id/imageButton6"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="200dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/enter"
+        android:gravity="center"
         android:onClick="Try_enter"
+        android:text="@string/enter"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/password"
         app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

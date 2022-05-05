@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -21,13 +22,33 @@
         app:srcCompat="@drawable/kartinka" />
 
     <EditText
+        android:id="@+id/email"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/gray"
+        android:ems="10"
+        android:hint="@string/mail_reg"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <EditText
         android:id="@+id/login2"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/gray"
         android:ems="10"
+        android:hint="@string/login_reg"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
         app:layout_constraintEnd_toEndOf="@+id/email"
         app:layout_constraintStart_toStartOf="@+id/email"
         app:layout_constraintTop_toBottomOf="@+id/email" />
@@ -35,10 +56,15 @@
     <EditText
         android:id="@+id/passwordt1"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/gray"
         android:ems="10"
+        android:hint="@string/password_hint"
         android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
         app:layout_constraintEnd_toEndOf="@+id/login2"
         app:layout_constraintStart_toStartOf="@+id/login2"
         app:layout_constraintTop_toBottomOf="@+id/login2" />
@@ -46,35 +72,31 @@
     <EditText
         android:id="@+id/passwordt2"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/gray"
         android:ems="10"
+        android:hint="@string/password_hint_repeat"
         android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#888888"
         app:layout_constraintEnd_toEndOf="@+id/passwordt1"
         app:layout_constraintStart_toStartOf="@+id/passwordt1"
         app:layout_constraintTop_toBottomOf="@+id/passwordt1" />
 
-    <ImageButton
-        android:id="@+id/enter2"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/regestration"
+        android:gravity="center"
         android:onClick="Try_reg"
+        android:text="@string/enter"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/passwordt2"
         app:layout_constraintStart_toStartOf="@+id/passwordt2"
-        app:layout_constraintTop_toBottomOf="@+id/passwordt2"
-        app:srcCompat="@android:drawable/button_onoff_indicator_on" />
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordt2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

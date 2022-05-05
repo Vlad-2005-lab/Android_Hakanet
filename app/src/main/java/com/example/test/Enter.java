@@ -4,12 +4,14 @@ import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.icu.number.IntegerWidth;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,10 +25,45 @@ import java.net.MulticastSocket;
 import java.net.URL;
 
 public class Enter extends AppCompatActivity {
+    Resources r;
+    int size_10_dp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enter);
+        r = this.getResources();
+        size_10_dp = (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                10,
+                r.getDisplayMetrics()
+        );
+        EditText login = (EditText) findViewById(R.id.login);
+        EditText password = (EditText) findViewById(R.id.password);
+        login.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    login.setBackgroundResource(R.drawable.gray_fockus);
+                } else {
+                    login.setBackgroundResource(R.drawable.gray);
+                }
+                login.setPadding(size_10_dp, size_10_dp, size_10_dp, size_10_dp);
+            }
+        });
+        password.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    password.setBackgroundResource(R.drawable.gray_fockus);
+                } else {
+                    password.setBackgroundResource(R.drawable.gray);
+                }
+                password.setPadding(size_10_dp, size_10_dp, size_10_dp, size_10_dp);
+            }
+        });
     }
 
     public void Try_enter(View view) {
@@ -36,6 +73,14 @@ public class Enter extends AppCompatActivity {
         String password = e2.getText().toString();
         AsyncRequest a = new AsyncRequest();
         String ans = a.doInBackground(login, password);
+        if (login.length() == 0){
+            e1.setBackgroundResource(R.drawable.gray_red);
+            e1.setPadding(size_10_dp, size_10_dp, size_10_dp, size_10_dp);
+        }
+        if (password.length() == 0){
+            e2.setBackgroundResource(R.drawable.gray_red);
+            e2.setPadding(size_10_dp, size_10_dp, size_10_dp, size_10_dp);
+        }
         if (ans.contains("not ok")) {
             Toast.makeText(this, "Введены неверные данные", Toast.LENGTH_SHORT).show();
             e2.setText("");
