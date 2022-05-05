@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
@@ -25,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         r = this.getResources();
         getSupportActionBar().hide();
+        ImageButton bt = (ImageButton) findViewById(R.id.imageButton2);
+        TextView tv = (TextView) findViewById(R.id.textView4);
+        bt.setColorFilter(Color.argb(255, 255, 100, 0));
+        tv.setTextColor(Color.argb(255, 255, 100, 0));
     }
 
     public void onClick(View view) throws InterruptedException {

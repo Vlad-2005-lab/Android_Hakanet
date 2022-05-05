@@ -161,8 +161,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="#FFFFFF"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/home"
-                tools:srcCompat="@drawable/home" />
+                app:srcCompat="@drawable/ic_home"
+                tools:srcCompat="@drawable/ic_home" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -191,8 +191,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="#FFFFFF"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/novosti"
-                tools:srcCompat="@drawable/novosti" />
+                app:srcCompat="@drawable/ic_news"
+                tools:srcCompat="@drawable/ic_news" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -221,8 +221,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="#FFFFFF"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/uchetila"
-                tools:srcCompat="@drawable/uchetila" />
+                app:srcCompat="@drawable/ic_teachers"
+                tools:srcCompat="@drawable/ic_teachers" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -247,8 +247,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="#FFFFFF"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/uchenik"
-                tools:srcCompat="@drawable/uchenik" />
+                app:srcCompat="@drawable/ic_pupils"
+                tools:srcCompat="@drawable/ic_pupils" />
 
             <TextView
                 android:id="@+id/textView7"
