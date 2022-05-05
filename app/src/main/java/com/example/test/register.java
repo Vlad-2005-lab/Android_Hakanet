@@ -118,7 +118,14 @@ public class register extends AppCompatActivity {
             if (ans.equals("busy")) {
                 ((EditText) findViewById(R.id.login)).setText("");
                 Toast.makeText(this, "К сожалению, такой логин занят", Toast.LENGTH_LONG).show();
-            } else {
+            } else if (ans.equals("invalid")){
+                ((EditText) findViewById(R.id.email)).setText("");
+                Toast.makeText(this, "Введите корректный email", Toast.LENGTH_LONG).show();
+            } else if (ans.equals("mail")){
+                ((EditText) findViewById(R.id.email)).setText("");
+                Toast.makeText(this, "К сожалению, такой email занят", Toast.LENGTH_LONG).show();
+            }
+            else {
                 Intent intent = new Intent(this, Enter.class);
                 startActivity(intent);
                 this.finish();
@@ -151,7 +158,7 @@ public class register extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... arg) {
-            String url = "https://" + domen + "/check_user?l=" + arg[0] + "&p=" + arg[1];
+            String url = "https://" + domen + "/create_user?l=" + arg[0] + "&p=" + arg[1] + "&m=" + arg[2];
             StringBuffer response;
             try {
                 URL obj = new URL(url);

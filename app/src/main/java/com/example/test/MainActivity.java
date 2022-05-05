@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -99,10 +100,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void enter_click(View view){
         Toast.makeText(getApplicationContext(), "enter", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, regenter.class);
+        startActivity(intent);
+        this.finish();
     }
 
     public void messenger(View view){
         Toast.makeText(getApplicationContext(), "messenger", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent();
     }
 
     public void profile(View view){
