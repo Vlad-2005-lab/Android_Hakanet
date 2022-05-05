@@ -154,7 +154,7 @@ public class register extends AppCompatActivity {
 
     static class AsyncRequest extends AsyncTask<String, Integer, String> {
 
-        String domen = "a339-178-72-68-143.ngrok.io";
+        String domen = "4f74-178-72-68-144.ngrok.io";
 
         @Override
         protected String doInBackground(String... arg) {

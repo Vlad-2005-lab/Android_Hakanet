@@ -130,11 +130,11 @@ public class Enter extends AppCompatActivity {
 
     static class AsyncRequest extends AsyncTask<String, Integer, String> {
 
-        String domen = "9497-2a00-1fa2-442e-29ea-9d1f-f9c6-f818-ff36.eu.ngrok.io";
+        String domen = "4f74-178-72-68-144.ngrok.io";
 
         @Override
         protected String doInBackground(String... arg) {
-            String url = "https://4f74-178-72-68-144.ngrok.io/check_user?l=" + arg[0] + "&p=" + arg[1];
+            String url = "https://" + domen + "/check_user?l=" + arg[0] + "&p=" + arg[1];
             StringBuffer response;
             try {
                 URL obj = new URL(url);

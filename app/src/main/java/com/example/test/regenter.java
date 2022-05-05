@@ -18,7 +18,6 @@ public class regenter extends AppCompatActivity {
     public void ent(View view){
         Intent intent = new Intent(this, Enter.class);
         startActivity(intent);
-        this.finish();
     }
 
 
@@ -26,8 +25,5 @@ public class regenter extends AppCompatActivity {
     public void reg(View view){
         Intent intent = new Intent(this, register.class);
         startActivity(intent);
-        this.finish();
     }
-
-
 }

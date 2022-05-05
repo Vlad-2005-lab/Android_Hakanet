@@ -107,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
     public void enter_click(View view){
         Intent intent = new Intent(this, regenter.class);
         startActivity(intent);
-        this.finish();
     }
 
     public void messenger(View view){
