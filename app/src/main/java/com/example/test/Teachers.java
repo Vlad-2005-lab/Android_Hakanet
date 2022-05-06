@@ -175,8 +175,8 @@ public class Teachers  extends AppCompatActivity {
     }
 
     public void messenger(View view){
-        Toast.makeText(getApplicationContext(), "messenger", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent();
+        Intent intent = new Intent(this, Allm.class);
+        startActivity(intent);
     }
 
     public void profile(View view){

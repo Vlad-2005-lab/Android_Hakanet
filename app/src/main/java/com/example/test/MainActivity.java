@@ -452,10 +452,8 @@ MainActivity extends AppCompatActivity {
     }
 
     public void messenger(View view){
-        Toast.makeText(getApplicationContext(), "messenger", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Allm.class);
         startActivity(intent);
-        this.finish();
     }
 
     public void profile(View view){
