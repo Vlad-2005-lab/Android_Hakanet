@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Test</string>
+    <string name="app_name">Кванториум</string>
     <string name="exit">Выйти</string>
     <string name="enter">Войти</string>
     <string name="register">Зарегистрироваться</string>

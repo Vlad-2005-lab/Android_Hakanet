@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
-
     <LinearLayout
         android:id="@+id/linearLayout11"
         android:layout_width="match_parent"
@@ -140,408 +139,36 @@
                 android:text="@string/students"
                 android:textColor="#0231A1"
                 android:textSize="16sp" />
+
         </LinearLayout>
 
     </LinearLayout>
 
-    <ScrollView
+    <ImageView
+        android:id="@+id/imageView9"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout11"
+        android:layout_height="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:srcCompat="@drawable/image2" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginStart="85dp"
-                android:layout_marginLeft="85dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginRight="25dp"
-                app:srcCompat="@drawable/image2" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rounded_blue"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="15dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="2dp">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/nema" />
-                </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:text="Фукин Игорь Анатольевич"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Кандидат физико-математических наук, доцент, более 20 лет работает в сфере образования, информатизации и инноваций. Автор 80 публикаций, 12 патентов и свидетельств о регистрации программ для ЭВМ. Руководитель многих детских и молодежных образовательных проектов."
-                        android:textColor="#000000" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rounded_blue"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="15dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="2dp">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/nema" />
-                </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:text="Ким Евгений Юрьевич"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text='Выпускник Камской государственной инженерно-экономической академии по специальности "Компьютерные системы управления в производстве и бизнесе". Специалист по программированию станков с ЧПУ, прототипированию, конструированию.'
-                        android:textColor="#000000" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rounded_blue"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="15dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="2dp">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/nema" />
-                </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:text="Латипов Рустам Динфирович"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text='Выпускник технического колледжа, в 2010-ом году окончил Камскую государственную инженерно-экономическую академию по специальности «Автоматизация технологических процессов и производств».'
-                        android:textColor="#000000" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rounded_blue"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="15dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="2dp">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/nema" />
-                </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:text="Шакирянов Марат Рашитович"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text='закончил Набережночелнинский Государственный Педагогический Университет по профилю география и биология, на сегодняшний день обучается в магистратуре. В рамках конференций и проектных сессий представлял работы по экономической географии и экологии. Специализируется на создании карт различной тематики.'
-                        android:textColor="#000000" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rounded_blue"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="15dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="2dp">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/nema" />
-                </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:text="Сысолятин Алексей Владимирович"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text='Педагог дополнительного образования (робототехника). Окончил Автомеханический техникум (2012), на данный момент является студентом Казанского Инновационного института по специальности – «Прикладная информатика в экономике». Педагогический стаж – 2. Прошел курс повышения квалификации «Техник-программист», «Компьютерная графика и основы сквозного проектирования CAD/CAM».'
-                        android:textColor="#000000" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rounded_blue"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="15dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="2dp">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/nema" />
-                </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:text="Абдуллин Гинар Фанусович"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text='Образование высшее, окончил Набережночелнинский институт социально-педагогических технологий и ресурсов в  2014 году, факультет математики и информатики, Специалист по математическому моделированию и программированию.'
-                        android:textColor="#000000" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_blue"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="15dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="2dp">
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/nema" />
-                </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:text="Хамидуллина Алсу Рафиковна"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text='педагог дополнительного образования (ИТ-квантум), выпускник Набережночелнинского государственного педагогического университета по направлению Математика и информатика. Сертифицированный педагог Яндекс.Лицея. Магистрант Елабужского института КФУ.'
-                        android:textColor="#000000" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+    <WebView
+        android:id="@+id/web_view_teachers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
     <LinearLayout
         android:id="@+id/vidvig11"
         android:layout_width="55dp"
-        android:layout_height="145dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
         android:background="@drawable/menu"
@@ -551,6 +178,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
+            android:id="@+id/profile_menu11"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
@@ -559,7 +187,8 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:onClick="profile"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView211"
@@ -583,6 +212,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/messenger_menu11"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
@@ -592,7 +222,8 @@
             android:layout_marginRight="10dp"
             android:gravity="left|center_vertical"
             android:onClick="messenger"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView611"
@@ -616,6 +247,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/exit_menu11"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
@@ -623,6 +255,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:gravity="start|center_vertical"
             android:onClick="enter_click"
             android:orientation="horizontal">
@@ -651,14 +284,12 @@
 
     <LinearLayout
         android:id="@+id/linearLayout311"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="-10dp"
-        android:layout_marginLeft="-10dp"
-        android:layout_marginTop="-10dp"
+        android:layout_width="61dp"
+        android:layout_height="60dp"
         android:background="@drawable/rounded"
         android:orientation="horizontal"
-        android:padding="15dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

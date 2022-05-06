@@ -41,6 +41,7 @@ MainActivity extends AppCompatActivity {
     Resources r;
     boolean flag = true;
     int count = 0;
+    boolean enter = false;
     WebView webview;
     LinearLayout i1;
     LinearLayout i2;
@@ -55,6 +56,8 @@ MainActivity extends AppCompatActivity {
     LinearLayout i11;
     LinearLayout i12;
     LinearLayout i13;
+    int size_221_dp;
+    int size_75_dp;
 
     public void all_disabled(){
         i1.setBackgroundResource(R.drawable.circle);
@@ -114,21 +117,26 @@ MainActivity extends AppCompatActivity {
         DBHelper dbHelper = new DBHelper(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         @SuppressLint("Recycle") Cursor c = db.query("sq", null, null, null, null, null, null);
+        ((LinearLayout) findViewById(R.id.profile_menu)).setVisibility(View.GONE);
+        ((LinearLayout) findViewById(R.id.messenger_menu)).setVisibility(View.GONE);
         if (c.moveToFirst()) {
             ImageView bt1 = (ImageView) findViewById(R.id.imageView7);
             bt1.setImageResource(R.drawable.ic_exit);
             TextView vieww = (TextView) findViewById(R.id.enter_or_exit);
             vieww.setText(R.string.exit);
+            ((LinearLayout) findViewById(R.id.profile_menu)).setVisibility(View.VISIBLE);
+            ((LinearLayout) findViewById(R.id.messenger_menu)).setVisibility(View.VISIBLE);
+            enter = true;
         }
     }
 
     public void onClick(View view) throws InterruptedException {
-        int size_221_dp = (int) TypedValue.applyDimension(
+        size_221_dp = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
-                205,
+                (enter ? 205 : 115),
                 r.getDisplayMetrics()
         );
-        int size_75_dp = (int) TypedValue.applyDimension(
+        size_75_dp = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
                 55,
                 r.getDisplayMetrics()
@@ -142,6 +150,10 @@ MainActivity extends AppCompatActivity {
             enter_or_exit.setVisibility(View.GONE);
             messenger.setVisibility(View.GONE);
             profile.setVisibility(View.GONE);
+            if (!enter){
+                ((LinearLayout) findViewById(R.id.profile_menu)).setVisibility(View.GONE);
+                ((LinearLayout) findViewById(R.id.messenger_menu)).setVisibility(View.GONE);
+            }
             imageButton.animate().rotation(360).setDuration(500).setListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
@@ -414,6 +426,25 @@ MainActivity extends AppCompatActivity {
             bt1.setImageResource(R.drawable.ic_login);
             TextView vieww = (TextView) findViewById(R.id.enter_or_exit);
             vieww.setText(R.string.enter);
+            ((LinearLayout) findViewById(R.id.profile_menu)).setVisibility(View.GONE);
+            ((LinearLayout) findViewById(R.id.messenger_menu)).setVisibility(View.GONE);
+            enter = false;
+            size_221_dp = (int) TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP,
+                    115,
+                    r.getDisplayMetrics()
+            );
+            LinearLayout linearLayout = (LinearLayout) findViewById(R.id.vidvig);
+            linearLayout.animate()
+                    .setDuration(250)
+                    .translationY(size_221_dp).setStartDelay(0)
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            linearLayout.setTranslationY(size_221_dp);//Здесь оставляем изменения после конца анимации
+                        }
+                    }).start();
         } else {
             Intent intent = new Intent(this, regenter.class);
             startActivity(intent);

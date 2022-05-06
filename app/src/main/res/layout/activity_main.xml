@@ -358,7 +358,7 @@
     <LinearLayout
         android:id="@+id/vidvig"
         android:layout_width="55dp"
-        android:layout_height="145dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
         android:background="@drawable/menu"
@@ -368,6 +368,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
+            android:id="@+id/profile_menu"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
@@ -376,7 +377,8 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:onClick="profile"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -400,6 +402,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/messenger_menu"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
@@ -409,7 +412,8 @@
             android:layout_marginRight="10dp"
             android:gravity="left|center_vertical"
             android:onClick="messenger"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -433,6 +437,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/exit_menu"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
@@ -440,6 +445,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:gravity="start|center_vertical"
             android:onClick="enter_click"
             android:orientation="horizontal">

@@ -143,25 +143,30 @@
 
     </LinearLayout>
 
-    <ScrollView
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image2" />
+
+    <WebView
+        android:id="@+id/web_view_students"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout111"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
     <LinearLayout
         android:id="@+id/vidvig111"
         android:layout_width="55dp"
-        android:layout_height="145dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
         android:background="@drawable/menu"
@@ -171,6 +176,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
+            android:id="@+id/profile_menu111"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
@@ -179,7 +185,8 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:onClick="profile"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView2111"
@@ -203,6 +210,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/messengers_menu111"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
@@ -212,7 +220,8 @@
             android:layout_marginRight="10dp"
             android:gravity="left|center_vertical"
             android:onClick="messenger"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView6111"
@@ -236,6 +245,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/exit_menu111"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
@@ -243,6 +253,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:gravity="start|center_vertical"
             android:onClick="enter_click"
             android:orientation="horizontal">

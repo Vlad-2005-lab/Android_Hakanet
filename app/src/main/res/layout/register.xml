@@ -93,7 +93,7 @@
         android:background="@drawable/regestration"
         android:gravity="center"
         android:onClick="Try_reg"
-        android:text="@string/enter"
+        android:text="@string/register"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/passwordt2"
         app:layout_constraintStart_toStartOf="@+id/passwordt2"

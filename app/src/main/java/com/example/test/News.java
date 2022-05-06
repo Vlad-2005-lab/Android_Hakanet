@@ -17,6 +17,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
+import android.webkit.WebView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -28,6 +29,9 @@ import androidx.appcompat.app.AppCompatActivity;
 public class News  extends AppCompatActivity {
     Resources r;
     boolean flag = true;
+    boolean enter = false;
+    int size_221_dp;
+    int size_75_dp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,25 +49,32 @@ public class News  extends AppCompatActivity {
         bt.setColorFilter(Color.argb(255, 255, 100, 0));
         tv.setTextColor(Color.argb(255, 255, 100, 0));
 
+        WebView news = (WebView) findViewById(R.id.web_view_news);
+        news.loadUrl("file:///android_res/raw/hui.html");
         ContentValues cv = new ContentValues();
         MainActivity.DBHelper dbHelper = new MainActivity.DBHelper(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         @SuppressLint("Recycle") Cursor c = db.query("sq", null, null, null, null, null, null);
+        ((LinearLayout) findViewById(R.id.profile_menu1)).setVisibility(View.GONE);
+        ((LinearLayout) findViewById(R.id.messenger_menu1)).setVisibility(View.GONE);
         if (c.moveToFirst()) {
             ImageView bt1 = (ImageView) findViewById(R.id.imageView71);
             bt1.setImageResource(R.drawable.ic_exit);
             TextView vieww = (TextView) findViewById(R.id.enter_or_exit1);
             vieww.setText(R.string.exit);
+            ((LinearLayout) findViewById(R.id.profile_menu1)).setVisibility(View.VISIBLE);
+            ((LinearLayout) findViewById(R.id.messenger_menu1)).setVisibility(View.VISIBLE);
+            enter = true;
         }
     }
 
     public void onClick(View view) throws InterruptedException {
-        int size_221_dp = (int) TypedValue.applyDimension(
+        size_221_dp = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
-                205,
+                (enter ? 205 : 115),
                 r.getDisplayMetrics()
         );
-        int size_75_dp = (int) TypedValue.applyDimension(
+        size_75_dp = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
                 55,
                 r.getDisplayMetrics()
@@ -77,6 +88,10 @@ public class News  extends AppCompatActivity {
             enter_or_exit.setVisibility(View.GONE);
             messenger.setVisibility(View.GONE);
             profile.setVisibility(View.GONE);
+            if (!enter){
+                ((LinearLayout) findViewById(R.id.profile_menu1)).setVisibility(View.GONE);
+                ((LinearLayout) findViewById(R.id.messenger_menu1)).setVisibility(View.GONE);
+            }
             imageButton.animate().rotation(360).setDuration(500).setListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
@@ -133,6 +148,25 @@ public class News  extends AppCompatActivity {
             bt1.setImageResource(R.drawable.ic_login);
             TextView vieww = (TextView) findViewById(R.id.enter_or_exit1);
             vieww.setText(R.string.enter);
+            ((LinearLayout) findViewById(R.id.profile_menu1)).setVisibility(View.GONE);
+            ((LinearLayout) findViewById(R.id.messenger_menu1)).setVisibility(View.GONE);
+            enter = false;
+            size_221_dp = (int) TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP,
+                    115,
+                    r.getDisplayMetrics()
+            );
+            LinearLayout linearLayout = (LinearLayout) findViewById(R.id.vidvig1);
+            linearLayout.animate()
+                    .setDuration(250)
+                    .translationY(size_221_dp).setStartDelay(0)
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            linearLayout.setTranslationY(size_221_dp);//Здесь оставляем изменения после конца анимации
+                        }
+                    }).start();
         } else {
             Intent intent = new Intent(this, regenter.class);
             startActivity(intent);
