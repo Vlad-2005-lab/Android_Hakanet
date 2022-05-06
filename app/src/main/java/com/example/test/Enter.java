@@ -130,7 +130,7 @@ public class Enter extends AppCompatActivity {
 
     static class AsyncRequest extends AsyncTask<String, Integer, String> {
 
-        String domen = "4f74-178-72-68-144.ngrok.io";
+        String domen = "1ac8-178-178-90-188.eu.ngrok.io";
 
         @Override
         protected String doInBackground(String... arg) {
