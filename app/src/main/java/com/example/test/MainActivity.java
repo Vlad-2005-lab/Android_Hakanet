@@ -36,7 +36,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-public class MainActivity extends AppCompatActivity {
+public class
+MainActivity extends AppCompatActivity {
     Resources r;
     boolean flag = true;
     int count = 0;
@@ -421,7 +422,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void messenger(View view){
         Toast.makeText(getApplicationContext(), "messenger", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent();
+        Intent intent = new Intent(this, Allm.class);
+        startActivity(intent);
+        this.finish();
     }
 
     public void profile(View view){

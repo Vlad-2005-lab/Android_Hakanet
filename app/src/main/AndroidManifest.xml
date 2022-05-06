@@ -29,6 +29,8 @@
         <activity android:name=".News"/>
         <activity android:name=".Teachers"/>
         <activity android:name=".Students"/>
+        <activity android:name=".Messages"/>
+        <activity android:name=".Allm"/>
     </application>
 
 </manifest>
